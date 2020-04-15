@@ -4,7 +4,7 @@ showNotes()
 let addBtn = document.getElementById("addButton");
 addBtn.addEventListener('click', function (e) {
     let addTxt = document.getElementById("addText");
-    let notes = sessionStorage.getItem('notes');
+    let notes = localStorage.getItem('notes');
     if (notes == null){
         notesObj = [];
     }
@@ -12,7 +12,7 @@ addBtn.addEventListener('click', function (e) {
         notesObj = JSON.parse(notes);
     }
     notesObj.push(addTxt.value);
-    sessionStorage.setItem('notes', JSON.stringify(notesObj));
+    localStorage.setItem('notes', JSON.stringify(notesObj));
     addTxt.value = "";
     console.log(notesObj)
     showNotes();
@@ -20,7 +20,7 @@ addBtn.addEventListener('click', function (e) {
 })
 
 function showNotes() {
-    let notes = sessionStorage.getItem("notes");
+    let notes = localStorage.getItem("notes");
     if(notes == null){
         notesObj = [];
     }
@@ -49,7 +49,7 @@ else {
 //Function to delete note
 function deleteNote(index) {
     console.log('I am deleting',index)
-     let notes = sessionStorage.getItem("notes");
+     let notes = localStorage.getItem("notes");
     if(notes == null){
         notesObj = [];
     }
@@ -58,7 +58,7 @@ function deleteNote(index) {
     }
 
     notesObj.splice(index, 1);
-    sessionStorage.setItem("notes",JSON.stringify(notesObj));
+    localStorage.setItem("notes",JSON.stringify(notesObj));
     showNotes()
 }
 //Function to search note
