@@ -4,6 +4,7 @@ showNotes()
 let addBtn = document.getElementById("addButton");
 addBtn.addEventListener('click', function (e) {
     let addTxt = document.getElementById("addText");
+    let notes = sessionStorage.getItem('notes');
     if (notes == null){
         notesObj = [];
     }
