@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <title>Notes</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Notes</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <form class="form-inline my-2 my-lg-0">
+      <input id= "searchText" class="form-control mr-sm-2" type="search" placeholder="Search Notes" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<div class="container my-3">
+  <h1>Welcome to Notes</h1>
+  <div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Add a note</h5>
+       <div class="form-group">
+    <textarea class="form-control" id="addText" rows="3" placeholder="Type Your Note Here"></textarea>
+  </div>
+    <button id="addButton" class="btn btn-primary">Add</button>
+  </div>
+    <hr>
+    <h1 style="text-align: center">Your Notes</h1>
+    <hr>
+    <div id="notes" class="row  container-fluid">
+    </div>
+</div>
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
